@@ -1,0 +1,26 @@
+<!-- 
+    * Add an app-content-card that loops through contentItemsArray of the content-list class
+    *  
+-->
+<h4>Search Posts Type:</h4>
+<input #userInput placeholder="Serach title"><button (click)="searchPosts(userInput.value)">Search</button>
+
+<h2>Posts of type: Books</h2>
+<app-content-card *ngFor="let item of (contentItemsArray | contentTagged: 'Books'); last as isLast" [cardContent]="item" [class.last-item]="isLast">
+    {{ item }}
+</app-content-card>
+
+<h2>Posts of type: Nature</h2>
+<app-content-card *ngFor="let item of (contentItemsArray | contentTagged: 'Nature'); last as isLast" [cardContent]="item" [class.last-item]="isLast">
+    {{ item }}
+</app-content-card>
+
+<h2>Posts of type: Cars</h2>
+<app-content-card *ngFor="let item of (contentItemsArray | contentTagged: 'Cars'); last as isLast" [cardContent]="item" [class.last-item]="isLast">
+    {{ item }}
+</app-content-card>
+
+<h2>Posts of type: Travels</h2>
+<app-content-card *ngFor="let item of (contentItemsArray | contentTagged: 'Travels'); last as isLast" [cardContent]="item" [class.last-item]="isLast">
+    {{ item }}
+</app-content-card>

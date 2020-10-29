@@ -1,0 +1,16 @@
+<div>
+  <div class="card {{ cardContent.type }}-cards">
+    <h1 appHoverStyle [textDecoration]='"underline"'>{{ cardContent.title }}</h1>
+    <p>Author: {{ cardContent.author }}</p>
+    <small>Article type: {{ cardContent.type }}</small>
+    <div class="row">
+      <p class="body-p">{{ cardContent.body }}</p>
+      <!-- Add onClick event to the image element -->
+      <div class="images" [ngSwitch]='cardContent.imageUrl'>
+        <img *ngSwitchCase="" src="https://ffindakly.scweb.ca/Bootstrap/not-available.jpg" (click)="imageIsClicked()"/>
+        <img *ngSwitchDefault src="{{ cardContent.imageUrl }}" (click)="imageIsClicked()"/>
+      </div>
+    </div>
+    <small appHoverStyle [fontWeight]='"bold"'>Tags: {{ cardContent.tags }}</small>
+  </div>
+</div>
