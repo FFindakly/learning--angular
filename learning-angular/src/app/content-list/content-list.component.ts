@@ -85,6 +85,13 @@ export class ContentListComponent implements OnInit {
     ];
   }
 
+// Adds new Content items from the form
+  addContentToArray(newContentFromChild: Content): void {
+    this.contentItemsArray.push(newContentFromChild);
+    // Clone the Content items array so that Pipe will work
+    this.contentItemsArray = Object.assign([], this.contentItemsArray);
+  }
+
   searchPosts(userInput: string): void {
     let found = false;
     for(let i =0; i < this.contentItemsArray.length; i++) {

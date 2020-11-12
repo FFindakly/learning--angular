@@ -1,0 +1,25 @@
+<div id="form">
+    <div class="form-row">
+        <label>Title: </label>
+        <input [(ngModel)]="newContent.title">
+    </div>
+    <div class="form-row"> 
+        <label>Author: </label>
+        <input [(ngModel)]="newContent.author">
+    </div>
+    <div class="form-row">
+        <label>Type: </label>
+        <input [(ngModel)]="newContent.type">
+    </div>
+        <div class="form-row">
+        <label>Body: </label>
+        <input [(ngModel)]="newContent.body">
+    </div>
+    <div class="form-row">
+        <label>Image URL: </label>
+        <input [(ngModel)]="newContent.imageUrl">   
+    </div>
+    <button (click)="addContent()">Add Post</button>
+</div>
+
+
