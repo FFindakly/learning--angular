@@ -12,6 +12,7 @@ export class CreateContentComponent implements OnInit {
 
   // Properties
   newContent: Content;
+  message: string;
 
   constructor() { 
     this.newContent = {
@@ -36,9 +37,9 @@ export class CreateContentComponent implements OnInit {
         validInputs = true;
       }
       if (validInputs) {
-        success("New post has been added");
+        success(this.message = "");
       } else {
-        fail("Fill missing fields");
+        fail(this.message = "Adding content failed");
       }
     });
     this.newPostEvent.emit(this.newContent);
