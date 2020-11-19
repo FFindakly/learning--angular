@@ -7,9 +7,10 @@ import { ContentListComponent } from './content-list/content-list.component';
 import { ContentTaggedPipe } from './content-tagged.pipe';
 import { DefaultTypePipe } from './default-type.pipe';
 import { HoverStyleDirective } from './hover-style.directive';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
-  declarations: [AppComponent, ContentCardComponent, ContentListComponent, ContentTaggedPipe, DefaultTypePipe, HoverStyleDirective],
+  declarations: [AppComponent, ContentCardComponent, ContentListComponent, ContentTaggedPipe, DefaultTypePipe, HoverStyleDirective, MessagesComponent],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
